@@ -1,28 +1,60 @@
+
+cat > style.css <<'EOF'
 :root {
   color-scheme: dark;
   font-family: system-ui, sans-serif;
-  background: #0b1016;
+  background: #090e14;
   color: #f0f4f8;
 }
 * { box-sizing: border-box; }
 body { margin: 0; min-height: 100vh; }
-.shell { width: min(1000px, 94%); margin: auto; padding: 34px 0; }
-header { text-align: center; margin-bottom: 26px; }
-.eyebrow { color: #ff654d; letter-spacing: .28em; font-size: .75rem; }
-h1 { font-size: clamp(2rem, 7vw, 4.4rem); line-height: 1; margin: 14px 0; }
+.shell { width: min(1100px, 95%); margin: auto; padding: 28px 0; }
+header { text-align: center; margin-bottom: 24px; }
+.eyebrow { color: #ff654d; letter-spacing: .25em; font-size: .75rem; }
+h1 { font-size: clamp(2rem, 7vw, 4.5rem); line-height: 1; margin: 14px 0; }
 h1 span { color: #ff654d; }
 .subtitle, .hint, footer { color: #9eacba; }
-.panel { background: #141d27; border: 1px solid #293746; border-radius: 14px; padding: 22px; }
-#menu { max-width: 540px; margin: auto; text-align: center; }
-button { cursor: pointer; background: #ff654d; color: #10141a; border: 0; padding: 13px 16px; margin: 7px 4px; border-radius: 7px; font-weight: 800; }
-#menu button { display: block; width: 100%; margin: 12px 0; }
+.panel {
+  background: #141d27;
+  border: 1px solid #293746;
+  border-radius: 14px;
+  padding: 22px;
+}
+#menu, #cameraSetup { max-width: 650px; margin: auto; text-align: center; }
+button {
+  cursor: pointer;
+  background: #ff654d;
+  color: #10141a;
+  border: 0;
+  padding: 12px 15px;
+  margin: 6px 4px;
+  border-radius: 7px;
+  font-weight: 800;
+}
 button:hover { filter: brightness(1.12); }
-.hidden { display: none; }
-.hud { display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; margin-bottom: 12px; }
+button:focus-visible { outline: 3px solid white; outline-offset: 3px; }
+#menu button { display: block; width: 100%; margin: 12px 0; }
+#cameraChoices { display: flex; flex-wrap: wrap; justify-content: center; margin: 16px 0; }
+#cameraChoices button.selected { background: #b6e3ff; }
+#startGame { background: #b6e3ff; }
+.hidden { display: none !important; }
+.hud { display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; margin-bottom: 12px; }
 #modeLabel { color: #ff806b; font-weight: 800; }
-canvas { display: block; width: 100%; height: auto; background: #202b2e; border: 1px solid #45534f; border-radius: 8px; }
-#message { color: #b8c5cf; font-size: .9rem; }
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #202b2e;
+  border: 1px solid #45534f;
+  border-radius: 8px;
+}
+#message { color: #d2dde6; font-size: .9rem; min-height: 1.4em; }
 .controls { display: flex; flex-wrap: wrap; justify-content: center; }
 .controls button { font-size: .75rem; }
 footer { text-align: center; margin-top: 24px; font-size: .72rem; letter-spacing: .12em; }
-@media(max-width: 600px) { .panel { padding: 12px; } .hud { gap: 8px; font-size: .8rem; } }
+@media(max-width: 600px) {
+  .panel { padding: 12px; }
+  .hud { gap: 8px; font-size: .8rem; }
+  .controls button { flex: 1 1 42%; }
+}
+EOF
