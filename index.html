@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Urban Resistance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <p class="eyebrow">SURVIVE • EXPLORE • RESIST</p>
+      <h1>URBAN <span>RESISTANCE</span></h1>
+      <p class="subtitle">The city belongs to those who survive.</p>
+    </header>
+
+    <section id="menu" class="panel">
+      <h2>Choose your operation</h2>
+      <button id="openWorld">01 / OPEN WORLD</button>
+      <button id="zombieMode">02 / ZOMBIE WAVES</button>
+      <p class="hint">Two modes. Two different battles.</p>
+    </section>
+
+    <section id="gamePanel" class="panel hidden">
+      <div class="hud">
+        <span id="modeLabel">MISSION</span>
+        <span>HP: <b id="health">100</b></span>
+        <span>COINS: <b id="coins">0</b></span>
+        <span>WAVE: <b id="wave">1</b></span>
+      </div>
+      <canvas id="game" width="900" height="540"></canvas>
+      <p id="message">WASD or arrow keys to move. Mouse to aim and click to fire.</p>
+      <div class="controls">
+        <button id="fireToggle">AUTO FIRE: OFF</button>
+        <button id="aimToggle">AIM ASSIST: ON</button>
+        <button id="backButton">BACK TO MENU</button>
+      </div>
+    </section>
+
+    <footer>JOSH64TITAN • EARLY PLAYABLE PROTOTYPE</footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
