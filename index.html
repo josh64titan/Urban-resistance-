@@ -13,31 +13,50 @@
       <h1>URBAN <span>RESISTANCE</span></h1>
       <p class="subtitle">The city belongs to those who survive.</p>
     </header>
-
+ 
     <section id="menu" class="panel">
       <h2>Choose your operation</h2>
       <button id="openWorld">01 / OPEN WORLD</button>
-      <button id="zombieMode">02 / ZOMBIE WAVES</button>
-      <p class="hint">Two modes. Two different battles.</p>
+      <button id="drivingMode">02 / DRIVING</button>
+      <button id="zombieMode">03 / ZOMBIE WAVES</button>
+      <p class="hint">Explore the city. Take the wheel. Survive the waves.</p>
     </section>
-
+ 
+    <section id="cameraSetup" class="panel hidden">
+      <h2>Choose your starting camera</h2>
+      <p class="hint">You can change this any time during gameplay.</p>
+      <div id="cameraChoices">
+        <button data-camera="third">THIRD-PERSON</button>
+        <button data-camera="first">FIRST-PERSON</button>
+        <button data-camera="overhead">TOP-DOWN</button>
+        <button data-camera="shoulder">SHOULDER VIEW</button>
+      </div>
+      <button id="startGame">START OPERATION</button>
+    </section>
+ 
     <section id="gamePanel" class="panel hidden">
       <div class="hud">
         <span id="modeLabel">MISSION</span>
         <span>HP: <b id="health">100</b></span>
         <span>COINS: <b id="coins">0</b></span>
-        <span>WAVE: <b id="wave">1</b></span>
+        <span>WAVE: <b id="wave">—</b></span>
       </div>
+ 
       <canvas id="game" width="900" height="540"></canvas>
-      <p id="message">WASD or arrow keys to move. Mouse to aim and click to fire.</p>
+ 
+      <p id="message">WASD to move. C changes the camera.</p>
+ 
       <div class="controls">
+        <button id="cameraButton">CAMERA: THIRD-PERSON [C]</button>
+        <button id="driveStyle">DRIVING: REALISTIC</button>
         <button id="fireToggle">AUTO FIRE: OFF</button>
         <button id="aimToggle">AIM ASSIST: ON</button>
         <button id="backButton">BACK TO MENU</button>
       </div>
+      <p class="hint">Move: WASD / arrows · Camera: C · Shoot: click / Space · Drive: W/S, steer: A/D</p>
     </section>
-
-    <footer>JOSH64TITAN • EARLY PLAYABLE PROTOTYPE</footer>
+ 
+    <footer>JOSH64TITAN • URBAN RESISTANCE DEVELOPMENT BUILD</footer>
   </main>
   <script src="game.js"></script>
 </body>
